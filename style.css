@@ -9,6 +9,7 @@
 
 :root {
     --white-color: #fff;
+    --light-black: #2b2d42;
 }
 
 body {
@@ -37,7 +38,7 @@ a {
     height: 600px;
     width: 1000px;
     display: grid;
-    grid-template-columns: 0.5fr 2fr 0.5fr;
+    grid-template-columns: 0.7fr 2fr 0.5fr;
     grid-template-rows: 1fr 3fr 1fr;
 }
 
@@ -47,8 +48,75 @@ a {
 }
 
 .left__bar {
-    background: black;
+    background: var(--white-color);
     grid-area: 1/1/4/2;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem 0 0rem 2rem;
+    padding: 1rem;
+}
+
+.left__bar .title {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    margin: 1rem 0;
+    color: var(--light-black);
+}
+
+.left__bar .title i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    background: linear-gradient(160deg, rgb(186, 145, 252) 35%, rgb(118, 39, 244) 100%);
+    border-radius: 50%;
+    color: var(--white-color);
+    margin-right: 5px;
+}
+
+.left__bar .option {
+    display: flex;
+}
+
+.left__bar .option i {
+    margin: 0.35rem 2rem;
+}
+
+.left__bar .option #chart {
+    color: #40916c;
+}
+
+.left__bar .option #note {
+    color: #48cae4;
+}
+
+.left__bar .option #circle {
+    color: #ffb703;
+}
+
+.left__bar .option #comment {
+    color: #9d4edd;
+}
+
+.left__bar .option #user {
+    color: #8ecae6;
+}
+
+.left__bar .option a {
+    color: var(--light-black);
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.left__bar .option li {
+    margin: 0.4rem 0;
+}
+
+.left__bar .option__icon {
+    display: flex;
+    flex-direction: column;
 }
 
 .right__bar {
